@@ -38,49 +38,61 @@ state.statusText = computed(() => {
 <template>
   <div class="welcome-container-wrap">
     <div class="welcome-container">
-      <div class="welcome-bubble">Welcome to Wireview</div>
+      <div class="welcome-bubble">Willkommen bei Wireview</div>
 
       <section>
-        <h2>About</h2>
+        <h2>Über</h2>
         <p>
-          Use Wireview to open and view packet capture files (.pcap, .pcapng,
-          etc) on the web. Wireview is built with Vue.js and powered by
-          Wireshark compiled to WebAssembly.
+          Verwende Wireview, um Paketaufzeichnungsdateien (.pcap, .pcapng, etc.) direkt im Browser zu öffnen und anzusehen.
+          Wireview wurde mit Vue.js entwickelt und nutzt Wireshark, das in WebAssembly kompiliert wurde.
         </p>
         <p>
-          All operations are done on the browser and no data is uploaded to any
-          server.
+          Alle Vorgänge werden im Browser ausgeführt; es werden keine Daten an einen Server hochgeladen.
         </p>
         <p>
+          <a
+            href="https://github.com/timbetzer/Wireview#"
+            target="_blank"
+            class="muted"
+            >Projektquellcode auf GitHub ansehen</a
+          >.
           <a
             href="https://github.com/radiantly/Wireview"
             target="_blank"
             class="muted"
-            >View the project source on GitHub.</a
-          >
-          Made possible by the
+            >Originalprojektcode uaf Github ansehen</a
+          >.
+          Ermöglicht durch die
           <a
             href="https://github.com/good-tools/wiregasm"
             target="_blank"
             class="muted"
             >Wiregasm</a
           >
-          and
+          und
           <a href="https://www.wireshark.org/" target="_blank" class="muted"
             >Wireshark</a
           >
-          projects.
+          Projekte.
+        </p>
+        <p>
+        <a
+            href="https://net.in.tum.de/homepage/legal.html"
+            target="_blank"
+            class="muted"
+            >Impressum</a
+          >
         </p>
       </section>
       <section>
-        <h2>Open</h2>
+        <h2>Öffnen</h2>
         <p v-if="manager.initialized">
-          Load successful. Select a file or
+          Laden erfolgreich. Wähle eine Datei aus oder
           <a href="/shark1.pcapng" @click.prevent="loadDemo"
-            >try out an example</a
+            >teste ein Beispiel</a
           >.
         </p>
-        <p v-else>Please wait, loading WASM binary...</p>
+        <p v-else>Bitte warten, WASM-Binärdatei wird geladen...</p>
         <label>
           <PcapFileInput />
         </label>
@@ -91,6 +103,7 @@ state.statusText = computed(() => {
     </div>
   </div>
 </template>
+
 <style scoped>
 p {
   max-width: 80ch;
