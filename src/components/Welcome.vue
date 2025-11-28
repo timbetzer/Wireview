@@ -60,7 +60,7 @@ state.statusText = computed(() => {
             href="https://github.com/radiantly/Wireview"
             target="_blank"
             class="muted"
-            >Originalprojektcode uaf Github ansehen</a
+            >Originalprojektcode auf Github ansehen</a
           >.
           Ermöglicht durch die
           <a

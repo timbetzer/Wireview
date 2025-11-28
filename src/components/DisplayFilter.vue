@@ -47,7 +47,7 @@ onBeforeUnmount(() =>
         :placeholder="
           manager.displayFilter
             ? `Current filter: ${manager.displayFilter}`
-            : 'Apply a display filter ... <Ctrl-/>'
+            : 'Display-Filter anwenden ... <Ctrl-/>'
         "
         :disabled="!manager.sessionInfo"
         :style="{
